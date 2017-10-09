@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Website Menu  -->
+        
+        <record id="menu_process" model="website.menu">
+            <field name="name">Symptom tool</field>
+            <field name="url">/page/symptom-tool</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">50</field>
+        </record>
+
+        <record id="menu_aboutus" model="website.menu">
+            <field name="name">About us</field>
+            <field name="url">/page/about-us</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">51</field>
+        </record>
+        
+        <record id="menu_donor_videos" model="website.menu">
+            <field name="name">Products</field>
+            <field name="url">/page/products</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">52</field>
+        </record>
+        
+        <record id="menu_prices" model="website.menu">
+            <field name="name">Expert advice</field>
+            <field name="url">/page/expert-advice</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">53</field>
+        </record>
+        
+        <record id="menu_faq" model="website.menu">
+            <field name="name">Magazine</field>
+            <field name="url">/page/magazine</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">54</field>
+        </record>
+        
+
+        
+    </data>
+</openerp>
