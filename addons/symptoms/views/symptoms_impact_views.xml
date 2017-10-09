@@ -1,0 +1,91 @@
+<odoo>
+    <data>
+    
+    	<record id="view_symptoms_impact_form" model="ir.ui.view">
+           <field name="name">Symptoms Impact Form</field>
+           <field name="model">symptoms.impact</field>
+           <field name="arch" type="xml">
+               <form string="Symptoms Impact">
+                   <sheet>
+                       <group>
+                       		<field name="partner_id" style="width:75%%" required="1" options="{'no_create_edit': True}"/>
+                            <field name="category_id" style="width:75%%" required="1" options="{'no_create_edit': True}"/>
+                            <field name="user_id" style="width:75%%" readonly="1" invisible="1"/>
+                       </group>
+                       <separator/>
+                       	<field name="symptoms_line_ids">
+                       		<tree create="false" delete="false" editable="bottom">
+                       			<button string="Info" name="button_info" type="object" icon="fa-info-circle" class="oe_inline oe_stat_button"/>
+                       			<field name="symptoms_id" readonly="1"/>
+                       			<field name="category_id" readonly="1" invisible="1"/>
+                       			<field name="impact_id" readonly="1" invisible="1"/>
+                       			<field name="is_select" string="Tick the Box"/>
+                       			<field name="rating" string="Rate the Negative Impact (1 to 10)"/>
+                       		</tree>
+                       	</field>
+                   </sheet>
+                   <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                   </div>
+               </form>
+           </field>
+        </record>
+    	
+    	<record id="view_symptoms_impact_tree" model="ir.ui.view">
+            <field name="name">Symptoms Impact Tree</field>
+            <field name="model">symptoms.impact</field>
+            <field name="arch" type="xml">
+                <tree string="Symptoms Impact">
+                	<field name="partner_id"/>
+                    <field name="category_id"/>
+                    <field name="user_id"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_symptoms_impact_search" model="ir.ui.view">
+            <field name="name">Symptoms Impact Search</field>
+            <field name="model">symptoms.impact</field>
+            <field name="arch" type="xml">
+                <search string="Symptoms Impact">
+                	<field name="partner_id"/>
+                    <field name="category_id"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="action_symptoms_impact" model="ir.actions.act_window">
+            <field name="name">Symptoms Impact</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">symptoms.impact</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click here to rate negative impact of your life.
+              </p>
+            </field>
+        </record>
+        
+        <menuitem name="Symptoms Impact" action="action_symptoms_impact" id="menu_symptoms_impact_submenu" parent="menu_symptoms" sequence="10"/>
+        
+        <record id="view_symptoms_impact_line_form" model="ir.ui.view">
+           <field name="name">Symptoms Impact Line Form</field>
+           <field name="model">symptoms.impact.line</field>
+           <field name="arch" type="xml">
+               <form string="Symptoms Impact Line">
+                   <sheet>
+                       <group>
+                       		<field name="symptoms_id"/>
+                       		<field name="category_id"/>
+                       		<field name="is_select"/>
+                       		<field name="rating"/>
+                       </group>
+                   </sheet>
+               </form>
+           </field>
+        </record>
+        
+    </data>
+</odoo>

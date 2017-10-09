@@ -1,0 +1,13 @@
+<odoo>
+    <data noupdate="0">
+    
+        <record id="menu_symptoms_category" model="website.menu">
+            <field name="name">Category</field>
+            <field name="url">/page/symptoms_category</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">12</field>
+            <field name="website_id" ref="website.default_website"/>
+        </record>
+        
+    </data>
+</odoo>

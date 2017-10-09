@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+
+		<!--Menstrual Symptoms-->
+
+        <template id="website.menstrual_symptoms" name="Menstrual Symptoms" page="True">
+			<t t-call="website.layout">
+             	<div id="wrap" class="bgImg">
+                  	<div id="container" class="container">
+						<h3><center><b>What symptoms are you experiencing?</b></center></h3>
+            			<div class="row" style="margin-top: 50px;">
+							<div class="col col-md-6">
+								<center><button id="Acne" onclick="applyClass('Acne')" class="button" style="height:100px;width:300px;float: right;margin-right: 20px;">Acne</button></center>
+								<center><button id="Cramps" onclick="applyClass('Cramps')" class="button" style="height:100px;width:300px;float: right;margin-right: 20px;">Cramps</button></center>
+								<center><button id="Insomnia" onclick="applyClass('Insomnia')" class="button" style="height:100px;width:300px;float: right;margin-right: 20px;">Insomnia</button></center>
+								<center><button id="Breast Pain" onclick="applyClass('Breast Pain')" class="button" style="height:100px;width:300px;float: right;margin-right: 20px;">Breast pain</button></center>
+								<center><button id="Upset Stomach" onclick="applyClass('Upset Stomach')" class="button" style="height:100px;width:300px;float: right;margin-right: 20px;">Upset stomach</button></center>
+								<center><button id="Constipation" onclick="applyClass('Constipation')" class="button" style="height:100px;width:300px;float: right;margin-right: 20px;">Constipation</button></center>
+								<center><button id="Diarrhea" onclick="applyClass('Diarrhea')" class="button" style="height:100px;width:300px;float: right;margin-right: 20px;">Diarrhea</button></center>
+								<center><button id="Headache" onclick="applyClass('Headache')" class="button" style="height:100px;width:300px;float: right;margin-right: 20px;">Headache</button></center>
+							</div>
+							<div class="col col-md-6">
+								<center><button id="Backache" onclick="applyClass('Backache')" class="button" style="height:100px;width:300px;float: left;margin-left: 20px;">Backache</button></center>
+								<center><button id="Joint or Muscle Pain" onclick="applyClass('Joint or Muscle Pain')" class="button" style="height:100px;width:300px;float: left;margin-left: 20px;">Joint or Muscle Pain</button></center>
+								<center><button id="Trouble concentrating" onclick="applyClass('Trouble concentrating')" class="button" style="height:100px;width:300px;float: left;margin-left: 20px;">Trouble concentrating</button></center>
+								<center><button id="Tension Mood Swings and Irritability" onclick="applyClass('Tension Mood Swings and Irritability')" class="button" style="height:100px;width:300px;float: left;margin-left: 20px;">Tension Mood Swings and Irritability</button></center>
+								<center><button id="Anxiety" onclick="applyClass('Anxiety')" class="button" style="height:100px;width:300px;float: left;margin-left: 20px;">Anxiety</button></center>
+								<center><button id="Depression" onclick="applyClass('Depression')" class="button" style="height:100px;width:300px;float: left;margin-left: 20px;">Depression</button></center>
+								<center><button id="Bloating" onclick="applyClass('Bloating')" class="button" style="height:100px;width:300px;float: left;margin-left: 20px;">Bloating</button></center>
+								<center><button id="Other" onclick="applyClass('Other')" class="button" style="height:100px;width:300px;float: left;margin-left: 20px;">Other</button></center>
+							</div>
+						</div>
+						<br/>
+						<center><button onclick="sendArray()">Submit</button></center>
+					</div>
+            	</div>
+         	</t>
+			<style>
+				.applyColor { background: #71b4dce3 }
+				#wrapwrap { background-image:  url(/website_symptoms_impact/static/src/img/symptom.jpg);
+							background-size: cover !important;
+    						background-repeat: no-repeat !important; }
+    			.navbar-default {
+    				background-color: #171717;
+					}
+			</style>
+			<script type="text/javascript">
+				var arrayList = [];
+				var sendString = "";
+				function applyClass(id){
+					var className = document.getElementById(id).className;
+					if(className == "applyColor"){
+						document.getElementById(id).remove("applyColor");
+					}
+					else {
+						arrayList.push(id);
+						document.getElementById(id).className = "applyColor";
+					}
+				}
+				
+				function sendArray(){
+				for (var k=0; k&lt;arrayList.length; k++){
+					sendString = (sendString + "," +arrayList[k]).replace(/^,|,$/g, "");
+				 }
+				localStorage.setItem("symptoms",sendString);
+				window.location.href="/page/website.symptoms_impact?key="+sendString;
+				}
+			</script>
+      	</template>
+
+    </data>
+</odoo>

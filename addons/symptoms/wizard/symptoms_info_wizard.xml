@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+
+        <record id="view_symptoms_info_wizard" model="ir.ui.view">
+        	<field name="name">Symptom Info</field>
+        	<field name="model">symptoms.wizard</field>
+        	<field name="arch" type="xml">
+            	<form string="Symptom Info">
+                	<field name="description" readonly="1"/>
+                	<footer>
+                    	<button string="Cancel" class="btn-default" special="cancel"/>
+                	</footer>
+           		</form>
+        	</field>
+        </record>
+
+    </data>
+</odoo>
