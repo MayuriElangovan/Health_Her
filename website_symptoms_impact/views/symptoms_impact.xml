@@ -1,0 +1,79 @@
+<odoo>
+    <data>
+        
+        <!--Symptoms - Impacts-->
+
+		<template id="website.symptoms_impact" name="Symptoms - Impacts" page="True">
+			<t t-call="website.layout">
+             	<div id="wrap">
+                  	<div id="container" class="container">
+						<h3><center><b>Rate the negative impact on your life</b></center></h3>
+					</div>
+            	</div>
+         	</t>
+			<script type="text/javascript">
+			$(window).on('load', function(){ 
+    			var symptoms = localStorage.getItem("symptoms");
+				var symptomsArray = symptoms.split(',');
+				for (var k=0; k &lt; symptomsArray.length; k++){
+					var para = document.createElement("P");
+					para.setAttribute("class","textClass");
+                	var t = document.createTextNode(symptomsArray[k]);
+                	para.appendChild(t);
+				
+				  	var input = document.createElement("input");
+				  	input.setAttribute("class","buttonClass");
+				  	input.setAttribute("type","range");
+				  	input.setAttribute("value","0");
+				  	input.setAttribute("min","0");
+				  	input.setAttribute("max","10");
+				  	input.setAttribute("id",symptomsArray[k]);
+				  	input.innerHTML = symptomsArray[k];
+				  	input.oninput = callFunction;
+				  
+				 	var para2 = document.createElement("P");
+				 	para2.setAttribute("class","paraClass");
+                 	para2.setAttribute("id", symptomsArray[k]+"Id");
+          
+				  	var body = document.getElementById("container");
+					body.appendChild(para);
+					body.appendChild(input);
+					body.appendChild(para2);
+				 }
+				
+   		 	});
+				function callFunction(){
+               		var output = document.getElementById(this.id+"Id");
+               		output.innerHTML = this.value;
+				}
+			</script>
+			<style>
+				.buttonClass {
+    				line-height: 60px;
+    				font-weight: bold;
+    				border: none;
+    				width: 50% !important;
+    				display: inline !important;
+    				margin-left: 300px;
+				}
+				.textClass {
+	 				width: 20%;
+     				margin-top: 20px;
+     				font-weight: bold;
+				}
+				.paraClass{
+    				display: inline;
+    				margin-left: 50px;
+				}
+				#wrapwrap { background-image:  url(/website_symptoms_impact/static/src/img/health_home.jpg);
+							background-size: cover !important;
+    						background-repeat: no-repeat !important;
+    						background-attachment: fixed !important; }
+    			.navbar-default {
+    				background-color: #171717;
+					}
+			</style>
+      	</template>
+        
+    </data>
+</odoo>

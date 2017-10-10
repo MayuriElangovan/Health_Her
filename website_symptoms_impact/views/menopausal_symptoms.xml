@@ -1,0 +1,94 @@
+<odoo>
+    <data>
+		
+        <!--Menopausal Symptoms-->
+		
+        <template id="website.menopausal_symptoms" name="Menopausal Symptoms" page="True">
+			<t t-call="website.layout">
+             	<div id="wrap">
+                  	<div id="container" class="container">
+						<h3><center><b>What symptoms are you experiencing?</b></center></h3>
+            			<div class="row" style="margin-top: 50px;">
+							<div class="col col-md-6">
+								<center><b><button class="button" id="Hot Flushes" onclick="applyClass('Hot Flushes')" style="height:100px;width:300px;float: right;margin-right: 20px;">Hot Flushes</button></b></center>
+								<center><button class="button" id="Night Sweats" onclick="applyClass('Night Sweats')" style="height:100px;width:300px;float: right;margin-right: 20px;">Night Sweats</button></center>
+								<center><button class="button" id="Irregular Periods" onclick="applyClass('Irregular Periods')" style="height:100px;width:300px;float: right;margin-right: 20px;">Irregular Periods</button></center>
+								<center><button class="button" id="Loss of Libido" onclick="applyClass('Loss of Libido')" style="height:100px;width:300px;float: right;margin-right: 20px;">Loss of Libido</button></center>
+								<center><button class="button" id="Vaginal Dryness" onclick="applyClass('Vaginal Dryness')" style="height:100px;width:300px;float: right;margin-right: 20px;">Vaginal Dryness</button></center>
+								<center><button class="button" id="Mood Swings" onclick="applyClass('Mood Swings')" style="height:100px;width:300px;float: right;margin-right: 20px;">Mood Swings</button></center>
+								<center><button class="button" id="Fatigue" onclick="applyClass('Fatigue')" style="height:100px;width:300px;float: right;margin-right: 20px;">Fatigue</button></center>
+								<center><button class="button" id="Hair loss" onclick="applyClass('Hair loss')" style="height:100px;width:300px;float: right;margin-right: 20px;">Hair loss</button></center>
+								<center><button class="button" id="Sleeping Difficulties" onclick="applyClass('Sleeping Difficulties')" style="height:100px;width:300px;float: right;margin-right: 20px;">Sleeping Difficulties</button></center>
+								<center><button class="button" id="Difficulty Concentrating" onclick="applyClass('Difficulty Concentrating')" style="height:100px;width:300px;float: right;margin-right: 20px;">Difficulty Concentrating</button></center>
+								<center><button class="button" id="Memory Lapses" onclick="applyClass('Memory Lapses')" style="height:100px;width:300px;float: right;margin-right: 20px;">Memory Lapses</button></center>
+								<center><button class="button" id="Dizziness" onclick="applyClass('Dizziness')" style="height:100px;width:300px;float: right;margin-right: 20px;">Dizziness</button></center>
+								<center><button class="button" id="Weight Gain" onclick="applyClass('Weight Gain')" style="height:100px;width:300px;float: right;margin-right: 20px;">Weight Gain</button></center>
+								<center><button class="button" id="Sensitive Bladder / Incontinence" onclick="applyClass('Sensitive Bladder / Incontinence')" style="height:100px;width:300px;float: right;margin-right: 20px;">Sensitive Bladder / Incontinence</button></center>
+								<center><button class="button" id="Bloating" onclick="applyClass('Bloating')" style="height:100px;width:300px;float: right;margin-right: 20px;">Bloating</button></center>
+								<center><button class="button" id="Allergies" onclick="applyClass('Allergies')" style="height:100px;width:300px;float: right;margin-right: 20px;">Allergies</button></center>
+								<center><button class="button" id="Brittle Nails" onclick="applyClass('Brittle Nails')" style="height:100px;width:300px;float: right;margin-right: 20px;">Brittle Nails</button></center>
+							</div>
+							<div class="col col-md-6">
+								<center><button class="button" id="Changes in Odour" onclick="applyClass('Changes in Odour')" style="height:100px;width:300px;float: left;margin-left: 20px;">Changes in Odour</button></center>
+								<center><button class="button" id="Irregular Heartbeat" onclick="applyClass('Irregular Heartbeat')" style="height:100px;width:300px;float: left;margin-left: 20px;">Irregular Heartbeat</button></center>
+								<center><button class="button" id="Depression" onclick="applyClass('Depression')" style="height:100px;width:300px;float: left;margin-left: 20px;">Depression</button></center>
+								<center><button class="button" id="Anxiety" onclick="applyClass('Anxiety')" style="height:100px;width:300px;float: left;margin-left: 20px;">Anxiety</button></center>
+								<center><button class="button" id="Irritability" onclick="applyClass('Irritability')" style="height:100px;width:300px;float: left;margin-left: 20px;">Irritability</button></center>
+								<center><button class="button" id="Breast Pain" onclick="applyClass('Breast Pain')" style="height:100px;width:300px;float: left;margin-left: 20px;">Breast Pain</button></center>
+								<center><button class="button" id="Headaches" onclick="applyClass('Headaches')" style="height:100px;width:300px;float: left;margin-left: 20px;">Headaches</button></center>
+								<center><button class="button" id="Joint Pain" onclick="applyClass('Joint Pain')" style="height:100px;width:300px;float: left;margin-left: 20px;">Joint Pain</button></center>
+								<center><button class="button" id="Burning Tongue" onclick="applyClass('Burning Tongue')" style="height:100px;width:300px;float: left;margin-left: 20px;">Burning Tongue</button></center>
+								<center><button class="button" id="Electic Shocks" onclick="applyClass('Electic Shocks')" style="height:100px;width:300px;float: left;margin-left: 20px;">Electic Shocks</button></center>
+								<center><button class="button" id="Digestive Problems" onclick="applyClass('Digestive Problems')" style="height:100px;width:300px;float: left;margin-left: 20px;">Digestive Problems</button></center>
+								<center><button class="button" id="Gum Problems" onclick="applyClass('Gum Problems')" style="height:100px;width:300px;float: left;margin-left: 20px;">Gum Problems</button></center>
+								<center><button class="button" id="Muscle Tension" onclick="applyClass('Muscle Tension')" style="height:100px;width:300px;float: left;margin-left: 20px;">Muscle Tension</button></center>
+								<center><button class="button" id="Itchy Skin" onclick="applyClass('Itchy Skin')" style="height:100px;width:300px;float: left;margin-left: 20px;">Itchy Skin</button></center>
+								<center><button class="button" id="Tingling Extremities" onclick="applyClass('Tingling Extremities')" style="height:100px;width:300px;float: left;margin-left: 20px;">Tingling Extremities</button></center>
+								<center><button class="button" id="Osteoporosis" onclick="applyClass('Osteoporosis')" style="height:100px;width:300px;float: left;margin-left: 20px;">Osteoporosis</button></center>
+							</div>
+						</div>
+					</div>
+					<br/>
+					<center><button onclick="sendArray()">Submit</button></center>
+            	</div>
+         	</t>
+			<style>
+				.applyColor { background: #71b4dce3 }
+				#wrapwrap { background-image:  url(/website_symptoms_impact/static/src/img/symptom.jpg);
+							background-size: cover !important;
+    						background-repeat: no-repeat !important; }
+    			.navbar-default {
+    				background-color: #171717;
+					}
+			</style>
+			<script type="text/javascript">
+				var arrayList = [];
+				var sendString = "";
+				function applyClass(id){
+					var className = document.getElementById(id).className;
+					if(className == "applyColor"){
+						document.getElementById(id).classList.remove("applyColor");
+						for (var k=0; k&lt;arrayList.length; k++){
+					     if(arrayList[k] == id){
+					     arrayList.splice(k,1);
+					     }
+				        }
+					}
+					else {
+						arrayList.push(id);
+						document.getElementById(id).className = "applyColor";
+					}
+				}
+				
+				function sendArray(){
+				for (var k=0; k&lt;arrayList.length; k++){
+					sendString = (sendString + "," +arrayList[k]).replace(/^,|,$/g, "");
+				 }
+				localStorage.setItem("symptoms",sendString);
+				window.location.href="/page/website.symptoms_impact?key="+sendString;
+				}
+			</script>
+      	</template>
+        
+    </data>
+</odoo>
