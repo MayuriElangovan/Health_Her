@@ -1,6 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-
-access_symptoms_impact,access.symptoms.impact,model_symptoms_impact,base.group_user,1,1,1,1
-access_symptoms_impact_line,access.symptoms.impact.line,model_symptoms_impact_line,base.group_user,1,1,1,1
-access_symptoms_category,access.symptoms.category,model_symptoms_category,base.group_user,1,1,1,1
-access_symptoms_symptoms,access.symptoms.symptoms,model_symptoms_symptoms,base.group_user,1,1,1,1

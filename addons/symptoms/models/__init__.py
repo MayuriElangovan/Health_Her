@@ -1,6 +1,0 @@
-import res_partner
-import symptoms_category
-import symptoms_symptoms
-import symptoms_impact
-import expert_advice
-import symptoms_articles
