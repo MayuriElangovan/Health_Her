@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="healt_her_website.products" name="Helat Her Products">
+		<t t-call="website.layout">
+			<div id="wrap" class="oe_structure oe_empty">
+				<div class="container-fluid">
+					<div class="row">
+						<img class="img-responsive" src="http://placehold.it/1920x480"/>
+					</div>
+				</div>
+
+				<div class="container top50">
+					<div class="row">
+						<div class="col-md-12">
+						<h1>Expert Advice</h1>
+					</div>
+					</div>
+				</div>
+
+				<div class="container gallery-container">
+					<div class="tz-gallery">
+
+						<div class="row">
+
+							<div class="col-sm-12 col-md-4">
+								<a class="lightbox" href="http://placehold.it/480x480">
+									<img class="img-responsive" src="http://placehold.it/480x480"/>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="http://placehold.it/480x480">
+									<img class="img-responsive" src="http://placehold.it/480x480"/>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="http://placehold.it/480x480">
+									<img class="img-responsive" src="http://placehold.it/480x480"/>
+								</a>
+							</div>
+							<div class="col-sm-12 col-md-8">
+								<a class="lightbox" href="http://placehold.it/480x480">
+									<img class="img-responsive" src="http://placehold.it/480x480"/>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="http://placehold.it/480x480">
+									<img class="img-responsive" src="http://placehold.it/480x480"/>
+								</a>
+							</div>
+							<div class="col-sm-6 col-md-4">
+								<a class="lightbox" href="http://placehold.it/480x480">
+									<img class="img-responsive" src="http://placehold.it/480x480"/>
+								</a>
+							</div>
+
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</t>
+	</template>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="healt_her_website.symptom_tool" name="Helat Her Symptom tool">
+		<t t-call="website.layout">
+			<div id="wrap" class="oe_structure oe_empty">
+				<div class="container top50">
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-responsive" src="http://placehold.it/600x300"/>
+							<p>Most of its text is made up from sections 1.10.32–3 of Cicero's De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also be translated as purposes). </p>
+							<p> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</p>
+							<p>Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken for type specimens: Quo usque tandem abutere, Catilina, patientia nostra? Quam diu etiam furor iste tuus nos eludet? (How long, O Catiline, will you abuse our patience? And for how long will that madness of yours mock us?)</p>
+						</div>
+						<div class="col-md-6">
+							<img class="img-responsive" src="http://placehold.it/600x300"/>
+							<p>Most of its text is made up from sections 1.10.32–3 of Cicero's De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also be translated as purposes). </p>
+							<p> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="container top50">
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-responsive" src="http://placehold.it/600x300"/>
+							<p>Most of its text is made up from sections 1.10.32–3 of Cicero's De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also be translated as purposes). </p>
+							<p> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</p>
+							<p>Cicero famously orated against his political opponent Lucius Sergius Catilina. Occasionally the first Oration against Catiline is taken for type specimens: Quo usque tandem abutere, Catilina, patientia nostra? Quam diu etiam furor iste tuus nos eludet? (How long, O Catiline, will you abuse our patience? And for how long will that madness of yours mock us?)</p>
+						</div>
+						<div class="col-md-6">
+							<img class="img-responsive" src="http://placehold.it/600x300"/>
+							<p>Most of its text is made up from sections 1.10.32–3 of Cicero's De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also be translated as purposes). </p>
+							<p> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</t>
+	</template>
+</odoo>
